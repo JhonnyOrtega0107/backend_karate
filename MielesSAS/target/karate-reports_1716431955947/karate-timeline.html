@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"Backend\/userCreate[1:13]","start":1716425185532,"end":1716425187876,"title":"Backend\/userCreate[1:13] 19:46:25.532-19:46:27.876 Validate status 201 when user is created"},{"id":2,"group":1,"content":"Backend\/userCreate[2:21]","start":1716425187886,"end":1716425188441,"title":"Backend\/userCreate[2:21] 19:46:27.886-19:46:28.441 Validate status 400 when data is invalid","className":"failed"},{"id":3,"group":1,"content":"Backend\/userDelete[1:12]","start":1716425189851,"end":1716425190381,"title":"Backend\/userDelete[1:12] 19:46:29.851-19:46:30.381 Validate status 204 when user is delete"},{"id":4,"group":1,"content":"Backend\/userFetchforID[1:11]","start":1716425190511,"end":1716425190810,"title":"Backend\/userFetchforID[1:11] 19:46:30.511-19:46:30.810 Validate status 200 when existing user"},{"id":5,"group":1,"content":"Backend\/userFetchforID[2:20]","start":1716425190811,"end":1716425191341,"title":"Backend\/userFetchforID[2:20] 19:46:30.811-19:46:31.341 Validate status 404 when non existing user"},{"id":6,"group":1,"content":"Backend\/userUpdate[1:13]","start":1716425191453,"end":1716425191981,"title":"Backend\/userUpdate[1:13] 19:46:31.453-19:46:31.981 Validate status 200 when user is update"},{"id":7,"group":1,"content":"Backend\/userUpdate[2:21]","start":1716425191992,"end":1716425192505,"title":"Backend\/userUpdate[2:21] 19:46:31.992-19:46:32.505 Validate status 400 when data is invalid","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
