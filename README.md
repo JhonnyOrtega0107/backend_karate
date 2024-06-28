@@ -54,9 +54,9 @@ The automation project has the following structure:
 
 Once the tests have been executed, Karate generates a report in HTML format. This report can be found in the following path:
 
+➡️​ **MielesSAS/target/karate-reports/karate-summary.html**
 
-
-To view the report, you can open the file karate-summary.html in the browser and you are done.
+To view the report, you can open the file **"karate-summary.html"** in the browser and you are done.
 
 ### ​​   📋​**Total Scenarios:** 7
    
