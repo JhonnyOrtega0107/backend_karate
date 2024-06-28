@@ -52,6 +52,12 @@ The automation project has the following structure:
 
 ## ​​💻​**Test Results Summary:**
 
+Once the tests have been executed, Karate generates a report in HTML format. This report can be found in the following path:
+
+
+
+To view the report, you can open the file karate-summary.html in the browser and you are done.
+
 ### ​​   📋​**Total Scenarios:** 7
    
 ###    ​​   ✔️​**Passed Scenarios:** 5
@@ -60,6 +66,6 @@ The automation project has the following structure:
 
 ## ​​​📊​**Detailed Results:**
 
-For detailed information on the test results, please refer to the file "2. Casos de Prueba - Automatizacion API" in the Documentation branch. This file contains a breakdown of each scenario, including its status, steps, and any associated errors or failures.
+For detailed information on the test results, please refer to the file "2. Test Cases - API Automation" in the Documentation branch. This file contains a breakdown of each scenario, including its status, steps, and any associated errors or failures.
 
 ![img_5.png](img_5.png)
